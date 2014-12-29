@@ -1,0 +1,27 @@
+{
+    "description": {
+        "message": "Быстрый и удобный перевод слов."
+    },
+
+    "content_view_button_more": {
+        "message": "Подробно"
+    },
+
+    "content_view_button_less": {
+        "message": "Кратко"
+    },
+
+    "content_nodefinition": {
+        "message": "Ничего не найдено." //'No definition found.'
+    },
+
+    "content_link": {
+        "message": "Переведено c помощью $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1",
+                "example": "MyDictionay.com"
+            }
+        }
+    }
+}

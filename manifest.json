@@ -1,0 +1,32 @@
+{
+    "name": "Lexi",
+    "version": "0.9",
+    "description": "__MSG_description__",
+    "default_locale": "ru",
+    "manifest_version": 2,
+    "minimum_chrome_version": "30",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwXoyNPFikx1+/SDYvXs5LX9xYaNjdygRcNw1+1tQtZR/y2xEa1LC2SMMztD/AqT21jIUpQrkoLtyVYFFkAoKXnSQYidR8La44I2SuybLMKXl5cLnEkPydlqdp+59mLfv1FWQ1MX97pzELJm+tUzPeQ3HL71eisbZ51TZsjI8NapjMkwHQna9T+D2Fec1p5c59B/pdiN1SIAYfLPRlxEYtni7EKXR7VzVx2zc9VzDWamhkD79Tq2oCj2Ki/89/4136fTR0ut2sSrwM0/xTUGBDQ7MZDYL5Bk2FcGSvrQs3kfXp0ELrxCqmMeew4t2i1RAlrnVAmqIJnyaDD25uEmsvQIDAQAB",
+
+    "permissions": [
+        "tabs",
+        "storage",
+        "http://slovari.yandex.ru/"
+    ],
+
+    "web_accessible_resources": [
+        "css/popup.css"
+    ],
+
+    "background": {
+        "scripts": [ "js/q.js", "js/utils.js", "js/lexi.js", "js/settings.js", "js/providers/yandex.lexi.js", "js/background.js" ],
+        "persistent": false
+    },
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*", "https://*/*" ],
+            "js": [ "js/content.js" ],
+            "run_at": "document_start"
+        }
+    ]
+}

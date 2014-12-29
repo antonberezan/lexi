@@ -1,0 +1,27 @@
+{
+    "description": {
+        "message": "The easiest way to see translations."
+    },
+
+    "content_view_button_more": {
+        "message": "More"
+    },
+
+    "content_view_button_less": {
+        "message": "Less"
+    },
+
+    "content_nodefinition": {
+        "message": "No definition found."
+    },
+
+    "content_link": {
+        "message": "Translated by $name$",
+        "placeholders": {
+            "name": {
+                "content": "$1",
+                "example": "MyDictionay.com"
+            }
+        }
+    }
+}

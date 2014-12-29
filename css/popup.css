@@ -1,0 +1,278 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic,latin-ext);
+
+.popup {
+    position: absolute;
+    padding: 15px;
+    max-width: 450px;
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    z-index: 99999;
+    opacity: 0;
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+    line-height: normal;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .7);
+}
+
+.popup:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    border: 8px solid transparent;
+}
+
+a {
+    color: #0781FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    z-index: 1000;
+    width: 16px;
+    height: 16px;
+    background: #333;
+    padding: 4px;
+    margin-top: 15px;
+    border-radius: 500rem;
+    opacity: 0;
+}
+
+.loader.show {
+    opacity: 1;
+    margin-top: -5px;
+    -webkit-transition: opacity ease .2s, margin-top ease .2s; 
+}
+
+.loader:after,
+.loader:before {
+    width: inherit;
+    height: inherit;
+    box-sizing: border-box;
+}
+
+.loader:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    -webkit-animation: loader .6s linear;
+    -webkit-animation-iteration-count: infinite;
+    border-radius: 500rem;
+    border-color: #aaa transparent transparent;
+    border-style: solid;
+    border-width: .2em;
+    box-shadow: 0 0 0 1px transparent;
+    border-color: #fff transparent transparent;
+}
+
+.loader:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    border-radius: 500rem;
+    border: .2em solid rgba(255,255,255,.3);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+@-webkit-keyframes loader {
+    from {
+        -webkit-transform:  translateX(-50%) translateY(-50%) rotate(0);
+    }
+    to {
+        -webkit-transform:  translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+}
+
+.popup-top {
+    margin-top: 15px;
+}
+
+.popup-top:after {
+    top: 100%;
+    border-top-color: #fff;
+}
+
+.popup-bottom {
+    margin-top: -15px;
+}
+
+.popup-bottom:after {
+    top: -16px;
+    border-bottom-color: #fff;
+}
+
+.popup.show {
+    margin-top: 0;
+    opacity: 1;
+    -webkit-transition: margin-top ease .15s, opacity ease .15s; 
+}
+
+.view-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #333;
+    border-bottom: 1px solid #333;
+    text-decoration: none;
+}
+
+.view-button:hover {
+    text-decoration: none;
+}
+
+.source {
+    float: right;
+    margin-top: 10px;
+}
+
+.title {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #0781FF;
+}
+
+.part-title {
+    font-size: 1em;
+    margin: 5px;
+    font-style: italic;
+    color: #15ea7f;
+    font-weight: normal;
+}
+
+.transcription {
+    margin: 10px 80px 10px 10px;
+    color: #B4292F;
+}
+
+.translations {
+    margin: 0;
+    list-style: decimal;
+}
+
+.translation .comment {
+    color: #999;
+}
+
+.translation .word-group:not(:last-child):after {
+    content: "; ";
+}
+
+.translation .word-group .word:not(:last-child):after {
+    content: ", ";
+}
+
+.nothing .view-button,
+.nothing .title,
+.nothing .source
+{
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.popup.dark {
+    background: #333;
+    color: rgb(235, 235, 235);
+}
+
+.popup-top.dark:after {
+    border-top-color: #333;
+}
+
+.popup-bottom.dark:after {
+    border-bottom-color: #333;
+}
+
+.popup.dark a {
+    color: rgb(86, 156, 214);
+}
+.popup.dark .view-button {
+    color: #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.popup.dark .title {
+    color: #50b7f1;
+}
+
+.popup.dark .transcription {
+    color: #aaa;
+}
+
+.popup.dark .part-title {
+    color: #4ec9b0;
+}
+
+.popup.dark .comment {
+    color: #aaa;
+}
+
+.compact .part {
+    display: inline;
+}
+
+.compact .part-title {
+    display: none;
+}
+
+.compact .translations {
+    list-style: none;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    display: inline;
+}
+
+/* displays only first 3 translations */
+.compact .translations .translation:nth-child(1n+4) {
+    display: none;
+}
+
+/* displays only first group */
+.compact .translations .word-group:nth-child(1n+2) {
+    display: none;
+}
+
+/* displays only first word */
+.compact .translations .word:nth-child(1n+2) {
+    display: none;
+}
+
+.compact .translation {
+    display: inline;
+}
+
+.compact .translation .word-group:after {
+    content: "";
+}
+
+.compact .translation .word-group .word:after {
+    content: ", ";
+}
+
+.compact .part:last-child .translation:not(:nth-child(-n+2)) .word:not(:nth-child(-n)):after {
+    content: "";
+}
+
+.compact .part:last-child .translation:nth-child(-n+4):last-child .word-group:nth-child(-n+2):last-child .word:nth-child(-n+2):last-child:after {
+    content: "";
+}

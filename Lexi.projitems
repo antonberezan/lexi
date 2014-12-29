@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e1d915a9-0d0c-4897-aa63-012fcbf9ee3b</SharedGUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)css\popup.css" />
+    <Content Include="$(MSBuildThisFileDirectory)js\background.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\content.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\settings.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\lexi.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\providers\yandex.lexi.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\q.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\utils.js" />
+    <Content Include="$(MSBuildThisFileDirectory)manifest.json" />
+    <Content Include="$(MSBuildThisFileDirectory)_locales\en\messages.json" />
+    <Content Include="$(MSBuildThisFileDirectory)_locales\ru\messages.json" />
+  </ItemGroup>
+</Project>
